@@ -1,0 +1,33 @@
+/* COLOR VARIATIONS */
+
+:root {
+  /* for header and footer */
+  --DarkestTurquoise: #0e171e;
+
+  /* main background */
+  --DarkerTurquoise: #121c25;
+
+  /* belt sections */
+  --DarkTurquoise: #192832;
+
+  /* paragraph text, CTA2-text */
+  --LightTurquoise: #d2f2f6;
+
+  /* forms-background, search-bar-background */
+  --LighterTurquoise: #e9f1f4;
+
+  /* h3-text, CTA1-text */
+  --LightestTurquoise: #effafc;
+
+  /* CTA1-background, link text, search-icon*/
+  --Purple: #a37bef;
+
+  /* h2-text, search-icon-background */
+  --LightPurple: #d6c3f8;
+
+  /* Logo, hero-text */
+  --Green: #b0ffb5;
+
+  /* h1-text */
+  --LightGreen: #d2ffd5;
+}
