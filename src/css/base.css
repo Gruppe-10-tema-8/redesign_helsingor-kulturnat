@@ -1,3 +1,21 @@
+/* RESET */
+
+reset * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* COLOR VARIATIONS */
 
 :root {
@@ -30,4 +48,26 @@
 
   /* h1-text */
   --LightGreen: #d2ffd5;
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: "Darker Grotesque";
+  src:
+    url("/src/assets/fonts/DarkerGrotesque-Light.woff2") format("woff2"),
+    url("/src/assets/fonts/DarkerGrotesque-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src:
+    url("/src/assets/fonts/DMSans-9ptRegular.woff2") format("woff2"),
+    url("/src/assets/fonts/DMSans-9ptRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
