@@ -8,6 +8,7 @@ reset * {
 
 body {
   margin: 0 auto;
+  background-color: var(--DarkerTurquoise);
 }
 
 img {
@@ -52,14 +53,11 @@ img {
 
 /* FONTS */
 
-@font-face {
+/* @font-face {
   font-family: "Darker Grotesque";
   src:
     url("/src/assets/fonts/DarkerGrotesque-Light.woff2") format("woff2"),
     url("/src/assets/fonts/DarkerGrotesque-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -67,7 +65,77 @@ img {
   src:
     url("/src/assets/fonts/DMSans-9ptRegular.woff2") format("woff2"),
     url("/src/assets/fonts/DMSans-9ptRegular.woff") format("woff");
-  font-weight: normal;
+} */
+
+.darker-grotesque {
+  font-family: "Darker Grotesque", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
-  font-display: swap;
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1,
+h2,
+h4 {
+  font-family: "Darker Grotesque";
+  letter-spacing: 1%;
+}
+
+h1 {
+  font-size: 82px;
+  font-weight: 300;
+  color: var(--Green);
+}
+
+h2 {
+  font-size: 74px;
+  font-weight: 300;
+  color: var(--LightGreen);
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--LightestTurquoise);
+}
+
+h3,
+a,
+p,
+.menu {
+  font-family: "DM Sans";
+  letter-spacing: 1%;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--LightPurple);
+}
+
+.menu {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: var(--Purple);
+}
+
+a {
+  font-size: 20px;
+  font-weight: 200;
+  font-style: italic;
+  text-decoration: underline;
+  color: var(--Purple);
+}
+
+p {
+  font-size: 20px;
+  font-weight: 200;
+  color: var(--LightTurquoise);
 }
