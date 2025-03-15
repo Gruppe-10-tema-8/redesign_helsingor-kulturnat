@@ -134,6 +134,11 @@ a {
   color: var(--Purple);
 }
 
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
 p {
   font-size: 18px;
   font-weight: 100;
