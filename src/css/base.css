@@ -51,22 +51,6 @@ img {
   --LightGreen: #d2ffd5;
 }
 
-/* FONTS */
-
-/* @font-face {
-  font-family: "Darker Grotesque";
-  src:
-    url("/src/assets/fonts/DarkerGrotesque-Light.woff2") format("woff2"),
-    url("/src/assets/fonts/DarkerGrotesque-Light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "DM Sans";
-  src:
-    url("/src/assets/fonts/DMSans-9ptRegular.woff2") format("woff2"),
-    url("/src/assets/fonts/DMSans-9ptRegular.woff") format("woff");
-} */
-
 .darker-grotesque {
   font-family: "Darker Grotesque", sans-serif;
   font-optical-sizing: auto;
@@ -87,19 +71,19 @@ h4 {
 }
 
 h1 {
-  font-size: 82px;
+  font-size: 4.125rem;
   font-weight: 300;
   color: var(--Green);
 }
 
 h2 {
-  font-size: 74px;
+  font-size: 3.4rem;
   font-weight: 300;
   color: var(--LightGreen);
 }
 
 h4 {
-  font-size: 28px;
+  font-size: 1.25rem;
   font-weight: 400;
   color: var(--LightestTurquoise);
 }
@@ -113,13 +97,13 @@ p,
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 1.2rem;
   font-weight: 400;
   color: var(--LightPurple);
 }
 
 .menu {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   font-style: normal;
   text-decoration: none;
@@ -127,7 +111,7 @@ h3 {
 }
 
 a {
-  font-size: 20px;
+  font-size: 0.9rem;
   font-weight: 200;
   font-style: italic;
   text-decoration: underline;
@@ -140,23 +124,135 @@ button:hover {
 }
 
 p {
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 2%;
+  line-height: 2;
   color: var(--LightTurquoise);
+}
+
+main h1,
+h2,
+h3,
+h4,
+p,
+a {
+  margin: 3vw;
 }
 
 .cta1 {
   font-family: "DM Sans";
   font-weight: 250;
-  font-size: 18px;
+  font-size: 0.9rem;
   text-decoration: none;
   letter-spacing: 2%;
   color: var(--LightestTurquoise);
 }
 
 .cta2 {
-  font-size: 18px;
+  font-size: 0.9rem;
   font-weight: 100;
   color: var(--LightTurquoise);
   letter-spacing: 3%;
+}
+
+.BeltSection {
+  background-color: var(--DarkTurquoise);
+  display: flex;
+}
+
+@media (min-width: 700px) {
+  h1,
+  h2,
+  h4 {
+    font-family: "Darker Grotesque";
+    letter-spacing: 1%;
+  }
+
+  h1 {
+    font-size: 5.125rem;
+    font-weight: 300;
+    color: var(--Green);
+  }
+
+  h2 {
+    font-size: 4.3rem;
+    font-weight: 300;
+    color: var(--LightGreen);
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--LightestTurquoise);
+  }
+
+  h3,
+  a,
+  p,
+  .menu {
+    font-family: "DM Sans";
+    letter-spacing: 1%;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 350;
+    color: var(--LightPurple);
+  }
+
+  .menu {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--Purple);
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 200;
+    font-style: italic;
+    text-decoration: underline;
+    color: var(--Purple);
+  }
+
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 200;
+    letter-spacing: 2%;
+    line-height: 2;
+    color: var(--LightTurquoise);
+  }
+
+  main h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    margin: 3vw;
+  }
+
+  .cta1 {
+    font-family: "DM Sans";
+    font-weight: 250;
+    font-size: 1rem;
+    text-decoration: none;
+    letter-spacing: 2%;
+    color: var(--LightestTurquoise);
+  }
+
+  .cta2 {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--LightTurquoise);
+    letter-spacing: 3%;
+  }
 }

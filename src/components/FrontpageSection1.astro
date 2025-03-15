@@ -1,0 +1,76 @@
+<section>
+  <img src="../src/assets/decoration/section1-bg.svg" alt="" />
+  <div>
+    <h1>Kulturnat 2025</h1>
+    <h3>Helsingørs årlige lyspunkt i det begyndende efterårs mørke aftener</h3>
+    <p class="mobile-p">
+      Det lokale kultur-, forenings- og handelsliv opfordrer i samarbejde med
+      borgerne om at komme ud af stuerne for sammen at fylde byrummene i Tikøb,
+      Espergærde og Helsingør med liv. <br />
+
+      Derfor åbnes dørene til Nordsjællands kulturnat på denne årlige
+      begivenhed, hvor vi fejrer i fællesskab.
+    </p>
+    <p class="desktop-p">
+      Det lokale kultur-, forenings- og handelsliv opfordrer i samarbejde med
+      borgerne om at komme ud af stuerne for sammen at fylde byrummene i Tikøb,
+      Espergærde og Helsingør med liv. <br />
+
+      Derfor åbnes dørene til Nordsjællands kulturnat på denne årlige
+      begivenhed, <br />
+      hvor vi fejrer i fællesskab.
+    </p>
+    <a href="#">Læs mere om Kulturnat 2025.</a>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 40px;
+    margin-top: -4vw;
+  }
+
+  div {
+    margin-top: 40px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  img {
+    grid-row: 1;
+    grid-column: 1;
+    height: 170%;
+  }
+
+  .desktop-p {
+    display: none;
+  }
+
+  a {
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 700px) {
+    section {
+      margin-bottom: -60px;
+    }
+    .mobile-p {
+      display: none;
+    }
+    .desktop-p {
+      display: block;
+      max-width: 820px;
+    }
+
+    h3 {
+      max-width: 600px;
+    }
+    img {
+      height: 750px;
+      width: 100%;
+    }
+  }
+</style>
