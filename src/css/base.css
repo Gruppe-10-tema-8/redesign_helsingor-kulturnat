@@ -220,6 +220,7 @@ a {
 
   a:hover,
   button:hover {
+    color: var(--LightestTurquoise);
     cursor: pointer;
   }
 
