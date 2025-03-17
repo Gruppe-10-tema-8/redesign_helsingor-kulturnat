@@ -1,0 +1,33 @@
+---
+import Starh2 from "../components/Starh2.astro";
+import Cta1 from "./Cta1.astro";
+---
+
+<Starh2 title="For arrangører:" />
+<h1>Vil du afholde en begivenhed?</h1>
+<h3>Alle kan deltage med arrangementer på Kulturnatten</h3>
+<p>
+  Store som små organisationer, institutioner og enkeltpersoner skaber på
+  Kulturnatten sammen liv i hele byen.  Hvis du har lyst til at deltage med et
+  arrangement på Kulturnatten, kan du få det med i det fælles program. <br />
+  <br /> Som arrangører har I selv det fulde ansvar for begivenheden, herunder sikkerhed
+  og indhentning af eventuelle nødvendige tilladelser.
+</p>
+<a href="#">Du kan læse mere om de praktiske oplysninger her.</a>
+<Cta1 text="Bliv arrangør" />
+
+<style>
+  h1 {
+    margin-top: -20px;
+    line-height: 1;
+  }
+  a {
+    display: block;
+  }
+
+  @media (min-width: 700px) {
+    p {
+      max-width: 68vw;
+    }
+  }
+</style>
