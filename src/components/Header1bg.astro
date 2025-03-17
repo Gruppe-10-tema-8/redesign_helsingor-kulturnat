@@ -1,0 +1,27 @@
+---
+const { title } = Astro.props;
+---
+
+<div>
+  <h1>{title}</h1>
+  <img src="../src/assets/decoration/h1section-bg.svg" alt={title} />
+</div>
+
+<style>
+  div {
+    display: grid;
+    position: relative;
+  }
+  img {
+    width: 50%;
+    /* border: 1px solid red; */
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  h1 {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+  }
+</style>
