@@ -131,15 +131,6 @@ p {
   color: var(--LightTurquoise);
 }
 
-main h1,
-h2,
-h3,
-h4,
-p,
-a {
-  margin: 3vw;
-}
-
 .cta1 {
   font-family: "DM Sans";
   font-weight: 250;
