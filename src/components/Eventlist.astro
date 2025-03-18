@@ -1,0 +1,52 @@
+---
+import Header1Section from "./Header1bg.astro";
+import Eventcard from "../components/Eventcard.astro";
+import Starh2 from "../components/Starh2.astro";
+import "../css/base.css";
+const udvalgteEvents = [
+  {
+    title: "Lorem Ipsum",
+    time: "19:00",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00",
+    location: "Lokation",
+    image: "../src/assets/beltsection-img.webp",
+  },
+];
+---
+
+<Header1Section title="Program 25" />
+<section>
+  <Starh2 title="Udvalgte" />
+  <div class="event_list">
+    {udvalgteEvents.map((event) => <Eventcard {...event} />)}
+  </div>
+</section>
+
+<style>
+  section {
+    margin: 40px;
+  }
+
+  .event_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(838px, 1fr));
+    gap: 20px;
+  }
+</style>
