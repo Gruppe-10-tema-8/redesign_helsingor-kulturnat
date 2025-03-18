@@ -1,0 +1,173 @@
+---
+
+---
+
+<header class="burger">
+  <div id="headercontent">
+    <nav>
+      <a href="" class="logo"></a>
+      <a href=""><p>Forside</p></a>
+      <a href="" class="dropdown"><p>Program</p><div class="arrow"></div></a>
+      <a href=""><p>Galleri</p></a>
+      <a href="" class="dropdown"><p>Arrangør</p><div class="arrow"></div></a>
+      <div></div>
+    </nav>
+  </div>
+  <button id="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </button>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    top: 0;
+  }
+  #headercontent {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    backdrop-filter: blur(0px);
+    transition: 0.5s ease-in;
+    overflow-y: auto;
+
+  }
+
+  #headercontent.active {
+    backdrop-filter: blur(8px);
+  }
+
+  #headercontent > nav {
+    width: 100%;
+    min-height: 100vh;
+    background-color: color-mix(in srgb, var(--DarkTurquoise), transparent 20%);
+    /* mask-image: url(../assets/star/light/large.svg); */
+    mask-size: 12vw;
+    mask-repeat: no-repeat;
+    mask-position: 85vw 3.6vw;
+    transition: 0.5s ease-in;
+    opacity: 0%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* #headercontent > nav a:last-child{
+    margin-bottom: 10%;
+  } */
+  #headercontent > nav a{
+    align-self: center;
+    text-decoration: none;
+    
+  }
+  #headercontent > nav a.dropdown{
+
+    display: flex;
+
+  }
+
+  #headercontent > nav a p{
+    font-style: normal;
+    text-decoration: none;
+    font-size: 150%;
+  }
+
+  a.dropdown > .arrow{
+    aspect-ratio: 1/1;
+    height: 2rem;
+    align-self: center;
+  }
+
+  a.logo{
+    align-self: normal !important;
+    mask-image: url(../assets/Logo.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--Green);
+    width: 50vw;
+    aspect-ratio: 16 / 9;
+
+
+
+  }
+
+  #headercontent.active > nav {
+    mask-size: 600vh;
+    mask-position: -320vw -300vw;
+    opacity: 100%;
+
+
+  }
+
+  button#burger {
+    top: 0;
+    right: 0;
+    position: relative;
+
+    margin: 0;
+
+    padding: 0;
+    width: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border-style: none;
+    width: 9vw;
+    aspect-ratio: 1 / 1;
+    float: right; /* har hørt at float er dårligt men øøøh fuck it */
+    transform: translate(-50%, 50%);
+  }
+  button#burger > div {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--Green);
+    transition: 0.33s ease-in-out;
+  }
+  button#burger > div:nth-child(1) {
+    top: 15%;
+  }
+
+  button#burger > div:nth-child(2) {
+    top: 50%;
+  }
+
+  button#burger > div:nth-child(3) {
+    top: 85%;
+  }
+
+  button#burger.active > div:nth-child(1) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  button#burger.active > div:nth-child(2) {
+    opacity: 0;
+  }
+
+  button#burger.active > div:nth-child(3) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  header {
+    position: fixed;
+  }
+</style>
+
+<script>
+  const burger = document.querySelector("button#burger");
+  const headercont = document.querySelector("#headercontent");
+  burger.addEventListener(`click`, burgerToggle);
+  function burgerToggle() {
+    console.log("Burger clicked");
+    burger.classList.toggle("active");
+    headercont.classList.toggle("active");
+  }
+</script>

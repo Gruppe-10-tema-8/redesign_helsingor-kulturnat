@@ -7,10 +7,18 @@ reset * {
 }
 
 body {
+  width: 100vw;
+  padding: 0;
   margin: 0 auto;
   background-color: var(--DarkerTurquoise);
+  overflow-x: hidden;
 }
-
+body,
+main,
+header,
+section {
+  overflow-x: none;
+}
 img {
   display: block;
   width: 100%;
@@ -21,34 +29,34 @@ img {
 
 :root {
   /* for header and footer */
-  --DarkestTurquoise: #0e171e;
+  --DarkestTurquoise: hsla(207, 33%, 9%, 1);
 
   /* main background */
-  --DarkerTurquoise: #121c25;
+  --DarkerTurquoise: hsla(210, 33%, 11%, 1);
 
   /* belt sections */
-  --DarkTurquoise: #192832;
+  --DarkTurquoise: hsla(206, 31%, 15%, 1);
 
   /* paragraph text, CTA2-text */
-  --LightTurquoise: #d2f2f6;
+  --LightTurquoise: hsla(188, 61%, 89%, 1);
 
   /* forms-background, search-bar-background */
-  --LighterTurquoise: #e9f1f4;
+  --LighterTurquoise: hsla(195, 33%, 93%, 1);
 
   /* h3-text, CTA1-text */
-  --LightestTurquoise: #effafc;
+  --LightestTurquoise: hsla(188, 67%, 96%, 1);
 
-  /* CTA1-background, link text, search-icon*/
-  --Purple: #a37bef;
+  /* CTA1-background, link text, search-icon */
+  --Purple: hsla(260, 76%, 71%, 1);
 
   /* h2-text, search-icon-background */
-  --LightPurple: #d6c3f8;
+  --LightPurple: hsla(260, 77%, 86%, 1);
 
   /* Logo, hero-text */
-  --Green: #b0ffb5;
+  --Green: hsla(124, 100%, 85%, 1);
 
   /* h1-text */
-  --LightGreen: #d2ffd5;
+  --LightGreen: hsla(124, 100%, 91%, 1);
 }
 
 .darker-grotesque {
@@ -167,6 +175,10 @@ a {
   h4 {
     font-family: "Darker Grotesque";
     letter-spacing: 1%;
+  }
+
+  header.burger{
+    display: none;
   }
 
   h1 {
