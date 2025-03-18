@@ -1,7 +1,24 @@
 ---
-import CTA1 from "../components/Cta1.astro";
+import Hero from "../components/Heroimg.astro";
+import Section1 from "../components/FrontpageSection1.astro";
+import Beltsection from "../components/Beltsection.astro";
+import Section2 from "../components/FrontpageSection2.astro";
 import Layout from "../layouts/Layout.astro";
 import "../css/base.css";
 ---
 
-<Layout />
+<Layout>
+  <Hero />
+  <Section1 />
+  <Beltsection
+    subtitle="Se programmerne for Helsingør, Espergærde og Tikøb"
+    paragraph="Vi glæder os til at se dig!"
+    ><h4>
+      Programmet bliver til i takt med at arrangørerne indtaster deres
+      begivenheder. <br /> Gå på opdagelse i de forskellige byer og find de begivenheder,
+      der interesserer dig. <br /> Du finder alt lige fra musik, madoplevelser, workshops
+      og meget mere til alle aldre.
+    </h4>
+  </Beltsection>
+  <Section2 />
+</Layout>
