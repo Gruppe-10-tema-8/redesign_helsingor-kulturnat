@@ -131,6 +131,16 @@ p {
   color: var(--LightTurquoise);
 }
 
+li a {
+  font-size: 1.25rem;
+  font-weight: 200;
+  letter-spacing: 2%;
+  line-height: 2;
+  color: var(--LightTurquoise);
+  margin: 0px;
+  font-style: normal;
+}
+
 .cta1 {
   font-family: "DM Sans";
   font-weight: 250;
@@ -227,6 +237,16 @@ p {
     line-height: 2;
     color: var(--LightTurquoise);
     margin: 0px;
+  }
+
+  li a {
+    font-size: 1.25rem;
+    font-weight: 200;
+    letter-spacing: 2%;
+    line-height: 2;
+    color: var(--LightTurquoise);
+    margin: 0px;
+    font-style: normal;
   }
 
   .cta1 {

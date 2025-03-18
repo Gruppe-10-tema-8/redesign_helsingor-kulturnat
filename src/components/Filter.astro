@@ -1,0 +1,116 @@
+---
+import "../css/base.css";
+---
+
+<form class="filer-form">
+  <div class="filters">
+    <div class="filter-group">
+      <button type="button" class="filter-button"><h4>Område</h4></button>
+      <ul class="dropdown">
+        <li><a href="#">Alle byer (104)</a></li>
+        <li><a href="#">Helsingør (52)</a></li>
+        <li><a href="#">Espergærde (30)</a></li>
+        <li><a href="#">Tilkøb (22)</a></li>
+      </ul>
+    </div>
+
+    <button type="button" class="filter-button"><h4>Begivenhed</h4></button>
+    <button type="button" class="filter-button"><h4>Arrangør</h4></button>
+  </div>
+  <div class="search">
+    <input type="text" placeholder="søg..." />
+    <button type="submit"
+      ><img src="../src/assets/search-icon.svg" alt="search" /></button
+    >
+  </div>
+</form>
+
+<style>
+  input:placeholder-shown {
+    font-size: 1.25rem;
+    font-weight: 200;
+    letter-spacing: 2%;
+    line-height: 2;
+    color: var(--LightTurquoise);
+    margin: 0px;
+    font-style: normal;
+  }
+
+  form {
+    display: flex;
+    padding: 40px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  button h4 {
+    text-align: left;
+  }
+
+  .filters {
+    display: flex;
+    gap: 20px;
+  }
+
+  .filter-button {
+    background: transparent;
+    border: 2px solid #effafc;
+    padding: 8px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 465px;
+  }
+
+  .filter-group {
+    position: relative;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    background: #121c25;
+    list-style: none;
+    width: 424px;
+    margin: 0;
+  }
+
+  .filter-group:hover .dropdown {
+    display: block;
+  }
+
+  .dropdown li {
+    padding: 5px;
+    border: 0.5px solid #effafc;
+    margin-left: -40px;
+  }
+
+  .dropdown a {
+    color: #a37bef;
+    text-decoration: none;
+  }
+
+  .search {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 874px;
+    justify-content: space-between;
+  }
+
+  .search input {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+  }
+
+  .search button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+</style>

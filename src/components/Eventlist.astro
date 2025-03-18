@@ -3,28 +3,56 @@ import Header1Section from "./Header1bg.astro";
 import Eventcard from "../components/Eventcard.astro";
 import Starh2 from "../components/Starh2.astro";
 import "../css/base.css";
+import Filter from "../components/Filter.astro";
 const udvalgteEvents = [
   {
     title: "Lorem Ipsum",
-    time: "19:00",
+    time: "19:00 - 21:30",
     location: "Lokation/sted",
     image: "../src/assets/beltsection-img.webp",
   },
   {
     title: "Lorem Ipsum",
-    time: "19:00",
+    time: "19:00 - 21:30",
     location: "Lokation/sted",
     image: "../src/assets/beltsection-img.webp",
   },
   {
     title: "Lorem Ipsum",
-    time: "19:00",
+    time: "19:00 - 21:30",
     location: "Lokation/sted",
     image: "../src/assets/beltsection-img.webp",
   },
   {
     title: "Lorem Ipsum",
-    time: "19:00",
+    time: "19:00 - 21:30",
+    location: "Lokation",
+    image: "../src/assets/beltsection-img.webp",
+  },
+];
+
+const familieEvents = [
+  {
+    title: "Lorem Ipsum",
+    time: "19:00 - 21:30",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00 - 21:30",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00 - 21:30",
+    location: "Lokation/sted",
+    image: "../src/assets/beltsection-img.webp",
+  },
+  {
+    title: "Lorem Ipsum",
+    time: "19:00 - 21:30",
     location: "Lokation",
     image: "../src/assets/beltsection-img.webp",
   },
@@ -32,16 +60,34 @@ const udvalgteEvents = [
 ---
 
 <Header1Section title="Program 25" />
+<Filter />
 <section>
-  <Starh2 title="Udvalgte" />
-  <div class="event_list">
-    {udvalgteEvents.map((event) => <Eventcard {...event} />)}
+  <div class="event_div">
+    <Starh2 title="Udvalgte" />
+    <div class="event_list">
+      {udvalgteEvents.map((event) => <Eventcard {...event} />)}
+    </div>
+  </div>
+  <div class="event_div">
+    <Starh2 title="Begivenheder for hele familien" />
+    <div class="event_list">
+      {familieEvents.map((event) => <Eventcard {...event} />)}
+    </div>
   </div>
 </section>
 
 <style>
   section {
+    display: flex;
+    flex-direction: column;
     margin: 40px;
+    gap: 200px;
+  }
+
+  .event_div {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 
   .event_list {
