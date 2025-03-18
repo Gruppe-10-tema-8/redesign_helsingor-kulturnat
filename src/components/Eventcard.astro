@@ -8,10 +8,14 @@ import Strokeheart from "../components/Strokeheart.astro";
 <div class="event_card">
   <div class="img_div"><img src={image} alt={title} /></div>
   <div class="text_div">
-    <h3>{title}</h3>
-    <p class="time">{time}</p><span></span>
-    <p class="text">Lorem ipsum dolor sit amet.</p>
-    <p class="location">{location}</p>
+    <div class="text-div_title">
+      <h3>{title}</h3>
+      <p class="time">{time}</p>
+    </div>
+    <div class="text-div_text">
+      <h4 class="text">Lorem ipsum dolor sit amet.</h4>
+      <h4 class="location">{location}</h4>
+    </div>
     <div class="CTA_div">
       <div class="button"><Cta1 text="Læs mere" /></div>
       <div class="heart"><Strokeheart /></div>
@@ -28,57 +32,58 @@ import Strokeheart from "../components/Strokeheart.astro";
     .event_card {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
+      grid-template-rows: auto;
       background: #1b1e26;
       border-radius: 8px;
       text-align: start;
       column-gap: 40px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .event_card .text_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    img {
+      border-top-right-radius: 400px;
+      width: 20vw;
+      height: 100%;
     }
 
     .event_card .img_div {
       grid-column: 1;
+      grid-row: 1;
       width: 100%;
       height: 100%;
     }
 
-    .event_card .text_div {
+    .event_card .text-div_title {
       grid-column: 2;
-      display: grid;
-      grid-template-rows: repeat(4, 1fr);
-    }
-
-    .text_div h3 {
       grid-row: 1;
-      margin: 0;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      place-self: start;
     }
 
-    .text_div .time {
+    .event_card .text-div_text {
+      grid-column: 2;
       grid-row: 2;
-      margin-top: -2vw;
-      margin-bottom: 5vw;
-    }
-    .text_div .text {
-      grid-row: 3;
-      margin-top: -2vw;
-      margin-bottom: 5vw;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      place-self:;
     }
 
-    .text_div .location {
-      grid-row: 4;
-      margin-top: -4vw;
-      margin-bottom: 5vw;
-    }
-
-    .text_div .CTA_div {
+    .event_card .text_div .CTA_div {
+      grid-column: 2;
       display: flex;
-      grid-row: 5;
-      margin-left: -75px;
-      padding-bottom: 20px;
+      grid-row: 1;
       justify-content: space-between;
     }
 
     .heart {
-      position: relative;
       padding-right: 20px;
     }
   </style>
