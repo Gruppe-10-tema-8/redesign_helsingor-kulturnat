@@ -1,0 +1,74 @@
+---
+import Cta1 from "./Cta1.astro"
+
+---
+<footer>
+    <div class="kontakt">
+        <p class="footertitle">Kontaktoplysninger</p>
+        <p>Har du et spørgsmål til Kulturnat?</p>
+        <p>Send os en mail: <a href="mailto:kulturnatten@elsinore2032.dk" target="_blank">kulturnatten@elsinore2032.dk</a></p>
+        
+        <div>
+            <p>For arrangører:</p>
+            <Cta1 text="Kontaktformular"/>
+        </div>
+    </div>
+    <div class="menu">
+        <p class="footertitle">
+            Menu
+        </p>
+        <div>
+            <a href="">Forside</a>
+            <a href="">Arrangør</a>
+            <a href="">Galleri</a>
+            <a href="">Om Kulturnatten</a>
+        </div>
+        <div>
+            <p>Følg os på Facebook:</p>
+            <a href="" class="facebook"></a>
+        </div>
+    </div>
+
+    <div class="logos"></div>
+</footer>
+
+<style>
+    footer{
+        height: 100vh;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    footer > div{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    p.footertitle{
+
+        font-size: 120%;
+        font-weight: 500;
+        color: var(--LightestTurquoise);
+    }
+    .menu,
+    .kontakt,
+    .logos{
+        border-style: solid;
+        border-color: var(--LightestTurquoise);
+        border-width: 0px;
+    }
+    .kontakt{
+        border-top-width: 1px;
+
+        border-bottom-width: 1px;
+    }
+    .menu{
+        border-bottom-width: 1px;
+    }
+
+</style>

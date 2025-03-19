@@ -3,13 +3,30 @@
 ---
 
 <header class="burger">
-  <div id="headercontent">
+  <div id="burgercontent">
     <nav>
       <a href="" class="logo"></a>
       <a href=""><p>Forside</p></a>
-      <a href="" class="dropdown"><p>Program</p><div class="arrow"></div></a>
+      <div class="dropdown">
+        <div>
+          <a href=""><p>Program</p></a><div class="arrow"></div>
+        </div>
+        <nav class="dropdowncontent">
+          <a href="">Helsingør</a>
+          <a href="">Espergade</a>
+          <a href="">Tikøb</a>
+        </nav>
+      </div>
       <a href=""><p>Galleri</p></a>
-      <a href="" class="dropdown"><p>Arrangør</p><div class="arrow"></div></a>
+      <div class="dropdown">
+        <div>
+          <a href=""><p>Arrangør</p></a><div class="arrow"></div>
+          <nav class="dropdowncontent">
+            <a href="">Kontakt</a>
+            <a href="">Opret begivenhed</a>
+          </nav>
+        </div>
+      </div>
       <div></div>
     </nav>
   </div>
@@ -29,21 +46,22 @@
     padding: 0;
     top: 0;
   }
-  #headercontent {
+  #burgercontent {
     position: absolute;
     width: 100%;
     min-height: 100vh;
     backdrop-filter: blur(0px);
     transition: 0.5s ease-in;
     overflow-y: auto;
-
+    pointer-events: none;
   }
 
-  #headercontent.active {
+  #burgercontent.active {
     backdrop-filter: blur(8px);
+    pointer-events: all;
   }
 
-  #headercontent > nav {
+  #burgercontent > nav {
     width: 100%;
     min-height: 100vh;
     background-color: color-mix(in srgb, var(--DarkTurquoise), transparent 20%);
@@ -59,33 +77,73 @@
     justify-content: space-between;
   }
 
-  /* #headercontent > nav a:last-child{
-    margin-bottom: 10%;
-  } */
-  #headercontent > nav a{
+  #burgercontent > nav a,
+  #burgercontent > nav div {
     align-self: center;
     text-decoration: none;
-    
   }
-  #headercontent > nav a.dropdown{
 
+  #burgercontent > nav .dropdown > div {
+    width: 100%;
     display: flex;
-
+    flex-direction: row;
+    justify-content: center;
+  }
+  #burgercontent > nav .dropdown {
   }
 
-  #headercontent > nav a p{
+  #burgercontent > nav a p,
+  #burgercontent .dropdown nav.dropdowncontent > a {
     font-style: normal;
     text-decoration: none;
     font-size: 150%;
   }
 
-  a.dropdown > .arrow{
+  .dropdown > div .arrow {
     aspect-ratio: 1/1;
     height: 2rem;
     align-self: center;
+    mask-image: url(../assets/arrows/dropdownarrow.svg);
+    mask-size: 50%;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    background-color: var(--LightTurquoise);
+    transition: 0.1s ease-in-out;
   }
 
-  a.logo{
+  .dropdown.active > div .arrow {
+    transform: rotate(90deg);
+  }
+
+  .dropdown nav.dropdowncontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .dropdown.active nav.dropdowncontent{
+    max-height: 1000px;
+  }
+
+  .dropdown nav.dropdowncontent > a {
+    font-size: 110% !important;
+    color: var(--LightTurquoise);
+    font-style: normal;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+    transform: translateY(-40vh);
+  }
+
+  .dropdown.active nav.dropdowncontent > a{
+    transform: translateY(0%);
+
+
+  }
+
+  a.logo {
     align-self: normal !important;
     mask-image: url(../assets/Logo.svg);
     mask-size: contain;
@@ -94,17 +152,12 @@
     background-color: var(--Green);
     width: 50vw;
     aspect-ratio: 16 / 9;
-
-
-
   }
 
-  #headercontent.active > nav {
+  #burgercontent.active > nav {
     mask-size: 600vh;
     mask-position: -320vw -300vw;
     opacity: 100%;
-
-
   }
 
   button#burger {
@@ -162,12 +215,25 @@
 </style>
 
 <script>
+  // const main = document.querySelector("main");
+  // const footer = document.querySelector("footer");
   const burger = document.querySelector("button#burger");
-  const headercont = document.querySelector("#headercontent");
+  const burgercont = document.querySelector("#burgercontent");
+  const burgerdropdowns = burgercont.querySelectorAll(".dropdown");
   burger.addEventListener(`click`, burgerToggle);
+
   function burgerToggle() {
     console.log("Burger clicked");
     burger.classList.toggle("active");
-    headercont.classList.toggle("active");
+    burgercont.classList.toggle("active");
+    // main.classList.toggle("burgeractive");
+    // footer.classList.toggle("burgeractive");
   }
+
+  burgerdropdowns.forEach((burgerdropdown) => {
+    const dropdownarrow = burgerdropdown.querySelector(".arrow");
+    dropdownarrow.addEventListener("click", () => {
+      burgerdropdown.classList.toggle("active");
+    });
+  });
 </script>

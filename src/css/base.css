@@ -169,6 +169,10 @@ a {
   display: flex;
 }
 
+header.desktopheader{
+  display:none;
+}
+
 @media (min-width: 700px) {
   h1,
   h2,
@@ -177,8 +181,17 @@ a {
     letter-spacing: 1%;
   }
 
+
+
+
+
   header.burger{
     display: none;
+  }
+  header.desktopheader{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 4fr 1fr;
   }
 
   h1 {

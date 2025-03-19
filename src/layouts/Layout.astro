@@ -1,5 +1,7 @@
 ---
 import Burger from "../components/Burger.astro"
+import DesktopHeader from "../components/DesktopHeader.astro"
+import FooterComp from "../components/FooterComp.astro"
 ---
 
 <!doctype html>
@@ -19,9 +21,11 @@ import Burger from "../components/Burger.astro"
   </head>
   <body>
     <Burger />
+    <DesktopHeader />
     <main>
       <slot />
     </main>
+    <FooterComp />
   </body>
 </html>
 
